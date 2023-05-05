@@ -1,6 +1,7 @@
 a = int(input("Enter your current result: "))
 b = int(input("Enter your desired result: "))
-count = 1
+count = 2
+print(f"1 day: {a}")
 
 while a < b:
     a += a * 0.1
