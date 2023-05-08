@@ -41,6 +41,7 @@ bubble(my_list)
 print(my_list)
 test(my_list)
 
+
 # i = 0
 #
 # while True:
@@ -50,6 +51,36 @@ test(my_list)
 #     if i % 2 == 0:
 #         continue
 #     print(i)
+
+def my_f(*args):
+    return sum(args)
+
+
+print(my_f(89, 66, 2, 3, 1))
+
+
+def my_fu(**kwargs):
+    return kwargs
+
+
+print(my_fu(n=89, j=66))
+
+my_fun = lambda n1, n2: n1 - n2
+
+print(my_fun(45, 6))
+
+print((lambda a1, a2: a1 - a2)(45, 6))
+
+
+a = [3, 4, 5, 2, 7, 8]
+b = [7, 9, 2, 4, 5, 1]
+c = [5, 7, 3, 4, 5, 9]
+
+dict_a = [{'name': 'python', 'points': 10}, {'name': "java", 'points': 8}]
+
+# print(list(map(lambda x, y, z: x + y + z, a, b, c)))
+# print(list(map(lambda x, y, z: 2 * x + 2.5 * y + z, a, b, c)))
+print(list(map(lambda x: x['name'], dict_a)))
 
 
 # my_list = [12, 3.4, 'str', True, False, [1, 2], 12, 11, 22]
