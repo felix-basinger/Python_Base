@@ -1,5 +1,10 @@
-from random import randint
+# from random import randint
+# import My_Func as mf
+from sys import argv
 
+#
+# mf.hi()
+# print(mf.simple())
 
 # length = 10
 # my_list = []
@@ -13,33 +18,33 @@ from random import randint
 #             my_list[j], my_list[j + 1] = my_list[j + 1], my_list[j]
 # print(my_list)
 
-def bubble(array):
-    for i in range(length - 1):
-        for j in range(length - i - 1):
-            if array[j] > array[j + 1]:
-                temp = array[j]
-                array[j] = array[j + 1]
-                array[j + 1] = temp
-
-
-def test(array):
-    size = len(array)
-    for i in range(size - 1):
-        if array[i] > array[i + 1]:
-            return print(False)
-    return print(True)
-
-
-length = 10
-my_list = []
-for i in range(length):
-    my_list.append(randint(1, 99))
-
-print(my_list)
-test(my_list)
-bubble(my_list)
-print(my_list)
-test(my_list)
+# def bubble(array):
+#     for i in range(length - 1):
+#         for j in range(length - i - 1):
+#             if array[j] > array[j + 1]:
+#                 temp = array[j]
+#                 array[j] = array[j + 1]
+#                 array[j + 1] = temp
+#
+#
+# def test(array):
+#     size = len(array)
+#     for i in range(size - 1):
+#         if array[i] > array[i + 1]:
+#             return print(False)
+#     return print(True)
+#
+#
+# length = 10
+# my_list = []
+# for i in range(length):
+#     my_list.append(randint(1, 99))
+#
+# print(my_list)
+# test(my_list)
+# bubble(my_list)
+# print(my_list)
+# test(my_list)
 
 
 # i = 0
@@ -52,35 +57,35 @@ test(my_list)
 #         continue
 #     print(i)
 
-def my_f(*args):
-    return sum(args)
-
-
-print(my_f(89, 66, 2, 3, 1))
-
-
-def my_fu(**kwargs):
-    return kwargs
-
-
-print(my_fu(n=89, j=66))
-
-my_fun = lambda n1, n2: n1 - n2
-
-print(my_fun(45, 6))
-
-print((lambda a1, a2: a1 - a2)(45, 6))
-
-
-a = [3, 4, 5, 2, 7, 8]
-b = [7, 9, 2, 4, 5, 1]
-c = [5, 7, 3, 4, 5, 9]
-
-dict_a = [{'name': 'python', 'points': 10}, {'name': "java", 'points': 8}]
+# def my_f(*args):
+#     return sum(args)
+#
+#
+# print(my_f(89, 66, 2, 3, 1))
+#
+#
+# def my_fu(**kwargs):
+#     return kwargs
+#
+#
+# print(my_fu(n=89, j=66))
+#
+# my_fun = lambda n1, n2: n1 - n2
+#
+# print(my_fun(45, 6))
+#
+# print((lambda a1, a2: a1 - a2)(45, 6))
+#
+#
+# a = [3, 4, 5, 2, 7, 8]
+# b = [7, 9, 2, 4, 5, 1]
+# c = [5, 7, 3, 4, 5, 9]
+#
+# dict_a = [{'name': 'python', 'points': 10}, {'name': "java", 'points': 8}]
 
 # print(list(map(lambda x, y, z: x + y + z, a, b, c)))
 # print(list(map(lambda x, y, z: 2 * x + 2.5 * y + z, a, b, c)))
-print(list(map(lambda x: x['name'], dict_a)))
+# print(list(map(lambda x: x['name'], dict_a)))
 
 
 # my_list = [12, 3.4, 'str', True, False, [1, 2], 12, 11, 22]
@@ -115,3 +120,18 @@ print(list(map(lambda x: x['name'], dict_a)))
 # print(my_dict.keys())
 # print(my_dict.items())
 # print(my_dict.values())
+
+
+# name, n_1, n_2, n_3 = argv
+# print(argv)
+# print(int(n_1) + int(n_2) * int(n_3))
+
+
+my_list = list(range(1, 11))
+new_list = [n + 10 if n % 2 == 0 else n ** 3 for n in my_list]
+n_list = [n for n in range(1, 11)]
+print(new_list)
+print(n_list)
+
+my_dict = {k: n ** 3 for k, n in zip("ASDFGHJCBNM", range(1, 11))}
+print(my_dict)
